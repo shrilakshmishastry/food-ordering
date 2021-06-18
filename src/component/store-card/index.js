@@ -1,6 +1,7 @@
 import React from 'react';
 import { Heading, Text } from '../ui';
 import PropType from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const style = {
     card: {
@@ -38,7 +39,9 @@ const StoreCard = ({ store }) => {
 
             <div className="row">
                 <div className="col-8">
+                    <Link to={`/search/store/${store.id}`}>
                     <Heading text={name} />
+                    </Link>
                     <Text text={`${priceRate} | ${desc}`} />
                     <Text text={`${rating.stars} Stars | ${rating.votes} ratings`} />
                 </div>
