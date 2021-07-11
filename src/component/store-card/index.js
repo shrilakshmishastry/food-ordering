@@ -18,7 +18,6 @@ const style = {
 
 const StoreCard = ({ store }) => {
     const { name, desc, priceRate, rating, delivery, images } = store;
-
     return (
         <div className="store-card" style={style.card}>
 
